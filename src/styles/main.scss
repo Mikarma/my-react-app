@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  background-color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* LAYOUT */
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 60px;
+}
+footer img {
+  margin: 0 auto 20px;
+}
+
+
+/* BANNER */
+.banner {
+  height: 220px;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.banner__title {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  z-index: 1;
+}
+
+/* HOME */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.gallery {
+  background: #F6F6F6;
+  border-radius: 25px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #FF6060;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.card__title {
+  position: relative;
+  color: white;
+  padding: 15px;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+/* ERROR PAGE */
+.error {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.error h1 {
+  font-size: 8rem;
+  color: #FF6060;
+}
+
+.error p {
+  margin: 20px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .banner__title {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .gallery {
+    background: transparent;
+    padding: 0;
+  }
+}

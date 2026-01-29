@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+
+.header {
+  max-width: 1240px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+
+  &__logo {
+    height: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 57px;
+
+    a {
+      font-size: 24px;
+      font-weight: 500;
+      color: black;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

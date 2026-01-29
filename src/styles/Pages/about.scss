@@ -1,0 +1,17 @@
+$primary-color: #ff6060;
+$light-gray: #f7f7f7;
+$dark: #000;
+
+$radius: 10px;
+$max-width: 1240px;
+
+
+.about {
+  width: 1240px;
+  &__content {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}

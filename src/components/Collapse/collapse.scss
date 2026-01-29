@@ -1,0 +1,33 @@
+.collapse {
+  border: 1px solid #FF6060;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #FF6060;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: 15px;
+    background-color: #f7f7f7;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: black;
+    text-align: start;
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease;
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+}

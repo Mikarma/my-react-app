@@ -8,6 +8,7 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  text-align: start;
   background: $primary-color;
 
 
@@ -23,7 +24,16 @@
     position: relative;
     color: white;
     font-size: 18px;
-    padding: 20px;
     z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 255px;
+
+    &__title {
+      font-size: 18px;
+    }
   }
 }

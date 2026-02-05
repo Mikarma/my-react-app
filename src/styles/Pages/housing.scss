@@ -7,6 +7,7 @@ $max-width: 1240px;
 
 
 .housing {
+  max-width: 1240px;
   &__info {
     display: flex;
     justify-content: space-between;
@@ -76,5 +77,49 @@ $max-width: 1240px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    align-items: start;
   }
 }
+
+@media (max-width: 768px) {
+  .housing{
+    margin: 0 15px;
+  }
+  .housing__info {
+    
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "tags tags"
+      "rating owner";
+    gap: 15px;
+  }
+  .housing__title {
+    grid-area: title;
+  }
+
+  .housing__tags {
+    grid-area: tags;
+  }
+
+  .housing__rating {
+    grid-area: rating;
+    justify-self: start;
+  }
+
+  .housing__owner {
+    grid-area: owner;
+    justify-self: end;
+  }
+    .housing__owner-rating {
+    display: contents;
+  }
+  .housing__details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+}
+

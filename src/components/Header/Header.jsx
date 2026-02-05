@@ -9,7 +9,7 @@ function Header() {
 
       <nav className="header__nav">
         <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">À propos</NavLink>
+        <NavLink to="/about">A Propos</NavLink>
       </nav>
     </header>
   );

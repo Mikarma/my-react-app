@@ -27,11 +27,10 @@ function Housing() {
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
           </div>
-          <div className="housing__owner">
+          <div className="housing__owner--dest">
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
-          
         </section>
 
         <section className="housing__owner-rating">
@@ -42,16 +41,22 @@ function Housing() {
               </span>
             ))}
           </div>
-          
+          <div className="housing__mob">
+            <div className="housing__rating">
+              {Array.from({ length: 5 }, (_, i) => (
+                <span key={i} className={i < logement.rating ? "star filled" : "star"}>
+                  ★
+                </span>
+              ))}
+            </div>
 
-          <div className="housing__rating">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span key={i} className={i < logement.rating ? "star filled" : "star"}>
-                ★
-              </span>
-            ))}
+            <div className="housing__owner--mob">
+              <p>{logement.host.name}</p>
+              <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
           </div>
         </section>
+        
 
         <section className="housing__details">
           <Collapse className="housing__details--desc" title="Description" content={logement.description} />

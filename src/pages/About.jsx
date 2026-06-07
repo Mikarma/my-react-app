@@ -4,7 +4,7 @@ import Collapse from "../components/Collapse/Collapse.jsx"
 import Header from "../components/Header/Header.jsx"
 import Footer from "../components/Footer/Footer.jsx"
 
-import aboutBanner from "../assets/img/about_banner.jpg"
+import aboutBanner from "/img/about_banner.jpg"
 
 function About() {
   const sections = [
